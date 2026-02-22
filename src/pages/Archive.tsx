@@ -9,7 +9,7 @@ const Archive = () => {
     const seminars = [
         { number: 44, year: 2025, city: "Минск", theme: "Творчество студентов и школьников в области математики и информатики и методы его развития", photos: ["/seminar-photos/minsk-2025.jpg", "/seminar-photos/minsk-2025-1.jpg", "/seminar-photos/minsk-2025-2.jpg"], collection: "/sbornik-2025.pdf" },
         { number: 43, year: 2024, city: "Сыктывкар", theme: "Математическая подготовка в школе и вузе: содержание и технологии", photos: ["/seminar-photos/syktyvkar-2024.jpg"], collection: "https://www.mathedu.ru/text/materialy_43_seminara_prepodavateley_matematiki_2024/p0/" },
-        { number: 42, year: 2023, city: "Смоленск", theme: "Математика и математическое образование: проблемы, технологии, перспективы", photos: ["/seminar-photos/smolensk-2023.jpg"] },
+        { number: 42, year: 2023, city: "Смоленск", theme: "Математика и математическое образование: проблемы, технологии, перспективы", photos: ["/seminar-photos/smolensk-2023.jpg"], collection: "/sbornik-2023.pdf" },
         { number: 41, year: 2022, city: "Киров", theme: "Математика и проблемы образования", photos: [] },
         { number: 40, year: 2021, city: "Брянск", theme: "Современные подходы к оценке и качеству математического образования в школе и вузе", photos: ["/seminar-photos/bryansk-2021.jpg", "/seminar-photos/bryansk-2021-2.jpg"] },
         { number: 39, year: 2020, city: "Москва", theme: "Математика – основа компетенций цифровой эры", photos: ["/seminar-photos/moscow-2020.jpg"] },
