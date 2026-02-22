@@ -13,6 +13,8 @@ import { ReactNode } from "react";
  * @property hasCollection - Есть ли сборник для скачивания
  * @property collectionLink - Ссылка на PDF сборника
  * @property link - Внешняя ссылка на материалы
+ * @property linkExt - Внешняя ссылка на регистрационную форму
+ * @property infLetter - ссылка на информационное письмо
  */
 export interface AnnouncementData {
   id: number;
@@ -23,6 +25,8 @@ export interface AnnouncementData {
   hasCollection?: boolean;
   collectionLink?: string;
   link?: string;
+  linkExt?: string;
+  infLetter?: string;
 }
 
 interface AnnouncementCardProps {
@@ -116,6 +120,28 @@ export const AnnouncementCard = ({ announcement }: AnnouncementCardProps) => {
           >
             <ExternalLink className="w-4 h-4 mr-2" />
             Перейти к материалам
+          </a>
+        )}
+        {announcement.linkExt && (
+          <a
+            href={announcement.linkExt}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-blue-50 hover:bg-blue-100 text-blue-700 px-4 py-2 rounded-lg transition-colors border border-blue-200 text-sm font-medium"
+          >
+            <ExternalLink className="w-4 h-4 mr-2" />
+            Регистрация
+          </a>
+        )}
+        {announcement.infLetter && (
+          <a
+            href={announcement.infLetter}
+            target="_blank"
+            download
+            className="inline-flex items-center bg-green-50 hover:bg-green-100 text-green-700 px-4 py-2 rounded-lg transition-colors border border-green-200 text-sm font-medium"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            Скачать информационное письмо (PDF)
           </a>
         )}
       </div>
