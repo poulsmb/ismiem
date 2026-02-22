@@ -12,12 +12,11 @@ const Announcements = () => {
   const announcements: AnnouncementData[] = [
     {
       id: 1,
-      title: "44-й семинар в Минске успешно завершён",
-      date: "Январь 2025",
-      category: "Итоги",
-      content: "Завершился 44-й Международный семинар преподавателей математики, который прошёл в Минске. Тема семинара: «Творчество студентов и школьников в области математики и информатики и методы его развития». По итогам работы опубликован сборник материалов.",
-      hasCollection: true,
-      collectionLink: "/sbornik-2025.pdf",
+      title: "Обновление архива материалов",
+      date: "2024",
+      category: "Архив",
+      content: "На портале mathedu.ru продолжается работа по оцифровке и публикации материалов прошедших семинаров. Коллекция постоянно пополняется.",
+      link: "https://www.mathedu.ru/catalogue/collections/groups/#materialy_seminara_prepodavateley_matematiki_vuzov",
     },
     {
       id: 2,
@@ -29,11 +28,21 @@ const Announcements = () => {
     },
     {
       id: 3,
-      title: "Обновление архива материалов",
-      date: "2024",
-      category: "Архив",
-      content: "На портале mathedu.ru продолжается работа по оцифровке и публикации материалов прошедших семинаров. Коллекция постоянно пополняется.",
-      link: "https://www.mathedu.ru/catalogue/collections/groups/#materialy_seminara_prepodavateley_matematiki_vuzov",
+      title: "44-й семинар в Минске успешно завершён",
+      date: "Январь 2025",
+      category: "Итоги",
+      content: "Завершился 44-й Международный семинар преподавателей математики, который прошёл в Минске. Тема семинара: «Творчество студентов и школьников в области математики и информатики и методы его развития». По итогам работы опубликован сборник материалов.",
+      hasCollection: true,
+      collectionLink: "/sbornik-2025.pdf",
+    },
+    {
+      id: 4,
+      title: "Открыта регистрация на 45-й семинар",
+      date: "Февраль 2026",
+      category: "Анонс",
+      content: "Открыта регистрация на 45-й Международный семинар по математическомуи информационному образованию А. Г. Мордковича «Цифровая трансформация образования: развитие традиций и новые возможности в обучении математике и информатике».",
+    linkExt: "https://scideck.ru/ismiem2026/",
+    infLetter: "/45/InfLet45.pdf",
     },
   ];
 
@@ -76,7 +85,10 @@ const Announcements = () => {
           </h2>
 
           <div className="space-y-6">
-            {announcements.map((announcement) => (
+            {announcements
+              .slice(-10)
+              .reverse()
+              .map((announcement) => (
               <AnnouncementCard key={announcement.id} announcement={announcement} />
             ))}
           </div>
